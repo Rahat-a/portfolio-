@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    
+    <script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+
+    <title>Personal portfolio website</title>
+</head>
+<body>
+
+
+    <!-- =============== THEME COLOR SWITCHER ============== -->
+    
+
+
+    <!-- ============== HEADER SECTION =================== -->
+    <header id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="#" class="navLogo">
+                        Rahat <span>サヌ</span>
+                    </a>
+                </div>
+                <input type="checkbox" id="checkbox">
+                <div class="hambergerMenu">
+                    <div class="hambIcon topLine"></div>
+                    <div class="hambIcon middleLine"></div>
+                    <div class="hambIcon endLine"></div>
+                </div>
+                <div class="navMenu">
+                    <ul>
+                        <li class="active"><a onclick="checkUncheck()" href="#home" >home</a></li>
+                        <li><a onclick="checkUncheck()" href="#about">About</a></li>
+                        <li><a onclick="checkUncheck()" href="#service" >Service</a></li>
+                        <li><a onclick="checkUncheck()" href="#project">Project</a></li>
+                        <li><a onclick="checkUncheck()" href="#contact">Contact</a></li>
+                    </ul>
+                </div>                
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================ HERO SECTION ============= -->
+    <section class="heroSection" id="home">
+        <div class="container">
+            <!-- <div class="hero"> -->
+                <div class="heroContent">
+                    <h3 class="heroSubtitle">Hello, <span>I"m</span></h3>
+                    <h1 class="heroTitle">Rahat Hassan</h1>
+                    <h3 class="heroEducation">Front-end Developer</h3>
+                    <p class="heroDescription">With knowledge in web development and design, I offer the best projects resulting in quality work.</p>
+                    <a href="#contact" class="heroButton"><button class="Button flash">Let's Talk</button></a>
+                    <div class="heroSocial">
+                        <ul>
+                            <li><a href="#" class="flash"><i class="ri-github-fill "></i></a></li><!--
+                            --><li><a href="#" class="flash"><i class="ri-dribbble-line "></i></a></li><!--
+                            --><li><a href="#" class="flash"><i class="ri-youtube-line "></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="heroImg">
+                    <svg class="heroBlob anim" viewBox="0 0 550 591" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="maskBlob" mask-type="alpha">
+                           <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
+                           170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
+                           447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
+                           587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
+                           438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z"/>
+                        </mask>
+                        <g mask="url(#maskBlob)">
+                           <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
+                           170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
+                           447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
+                           587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
+                           438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z"/>
+                     
+                           <rect x="37" width="476" height="630" fill="url(#pattern0)"/>
+                        </g>
+                     
+                        <rect x="37" width="476" height="300" fill="url(#pattern1)"/>
+                     
+                        <defs>
+                           <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                              <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
+                           </pattern>
+                     
+                           <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                              <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
+                           </pattern>
+                     
+                           <!-- Insert your profile (recommended size: 640 x 940) -->
+                           <image id="imageBlob" width="640" height="925" href="./img/perfil.png"/>
+                        </defs>
+                     </svg>
+                </div>
+            <!-- </div> -->
+        </div>
+    </section>
+
+
+    <!-- =============== ABOUT SECTION  ============= -->
+    <section class="aboutSection" id="about">
+        <div class="container">
+            <div class="aboutImg">
+                <svg class=" aboutsvg" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="maskBorder" mask-type="alpha">
+                       <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
+                       171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157 
+                       448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609 
+                       270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843 
+                       439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black"/>
+                    </mask>
+                    <g mask="url(#maskBorder)">
+                       <rect x="37" width="476" height="630" fill="url(#pattern2)"/>
+                       
+                       <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
+                       192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 
+                       580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 
+                       40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843 
+                       175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black" stroke-width="10"/>
+                    </g>
+                 
+                    <rect x="37" width="476" height="300" fill="url(#pattern3)"/>
+                 
+                    <defs>
+                       <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                          <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
+                       </pattern>
+                 
+                       <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                          <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
+                       </pattern>
+                 
+                       <!-- Insert your profile (recommended size: 640 x 940) -->
+                       <image id="imageBorder" width="640" height="940" href="./img/perfil.png"/>
+                    </defs>
+                 </svg>
+            </div>
+            <div class="defaultTitleSection">
+                <h4>My <span>Intro</span></h4>
+                <h2>about me</h2>
+                <p>Frontend developer, I create web pages with UI / UX user interface, I have years of experience and many clients are happy with the projects carried out. With knowledge in web development and design, I offer the best projects resulting in quality work.</p>
+                <button class="Button flash">Contact Me</button></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =====================SKILLS SECTION ===================== -->
+    <section class="skillSection">
+        <div class="container">
+            <div class="skillDocument">
+                <div class="defaultTitleSection">
+                    <h4>Favorite <span>Skills</span></h4>
+                    <h2>My Skills</h2>
+                    <p>See fully what skills I have and perform, to <br>
+                         develop the projects for you.</p>
+                    <button class="Button flash">See Projects</button></a>
+                </div>
+            </div>
+            <div class="tabSection">
+                <div class="tabMenu">
+                    <input type="radio" name="tabSlider" id="tab1" checked>
+                    <input type="radio" name="tabSlider" id="tab2">
+
+                    <nav>
+                        <label for="tab1" class="tab1">Language List</label><!--
+                        --><label for="tab2" class="tab2">Language progress</label>
+                    </nav>
+
+                    <!-- TAB CONTENT -->
+                    <div class="tabContent-box">
+                        <div class="tabContent tabContent1">
+                            <div class="skillList">
+                                <div class="listItem 1st">
+                                    <span>01. </span> HTMLS & CSS
+                                </div>
+                                <div class="listItem 2nd">
+                                    <span>02. </span> JavaScript
+                                </div>
+                                <div class="listItem 3rd">
+                                    <span>03. </span> Bootstrap
+                                </div>
+                                <div class="listItem 4th">
+                                    <span>04. </span> React
+                                </div>
+                                <div class="listItem 5th">
+                                    <span>05. </span> Git & GitHub
+                                </div>
+                                <div class="listItem 6th">
+                                    <span>06. </span> Figma
+                                </div>
+                                <div class="listItem 7th">
+                                    <span>07. </span> Sketch
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="tabContent tabContent2">
+                            <div class="progressItem preg1">
+                                <span>HTML</span>
+                                <div class="progressBar">
+                                    <div class="parcentage">
+                                        <div class="parcentText">95%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progressItem preg2">
+                                <span>CSS</span>
+                                <div class="progressBar">
+                                    <div class="parcentage">
+                                        <div class="parcentText">90%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progressItem preg3">
+                                <span>JavaScript</span>
+                                <div class="progressBar">
+                                    <div class="parcentage">
+                                        <div class="parcentText">81%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progressItem preg4">
+                                <span>Bootstrap</span>
+                                <div class="progressBar">
+                                    <div class="parcentage">
+                                        <div class="parcentText">92%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progressItem preg5">
+                                <span>React</span>
+                                <div class="progressBar">
+                                    <div class="parcentage">
+                                        <div class="parcentText">89%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progressItem preg6">
+                                <span>Figma</span>
+                                <div class="progressBar">
+                                    <div class="parcentage">
+                                        <div class="parcentText">84%</div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <!-- ======================== SERVICE SECTION =================== -->
+    <section class="serviceSection" id="service">
+        <div class="container">
+            <div class="defaultTitleSection">
+                <h4>My <span>Service</span></h4>
+                <h2>What i do</h2>
+            </div>
+            <div class="service-box">
+                <div class="serviceItem sItem1">
+                    <i class="ri-layout-5-line servIcon"></i>
+                    <h3 class="servTitle">Web Developer</h3>
+                    <p class="servText">Development of custom web pages. Using current technologies and libraries of the labor field.</p>
+                </div>
+                <div class="serviceItem sItem2">
+                    <i class="ri-pantone-line servIcon"></i>
+                    <h3 class="servTitle">UI/UX Developer</h3>
+                    <p class="servText">I offer design of web interfaces and mobile applications, design made in figma, adobe xd and sketch.</p>
+                </div>
+                <div class="serviceItem sItem3">
+                    <i class="ri-palette-line servIcon"></i>
+                    <h3 class="servTitle">Graphic Designer</h3>
+                    <p class="servText">I make designs at the client's request, banner design, posters, digital designs among others.</p>
+                </div>
+                <div class="serviceItem sItem4">
+                    <i class="ri-gamepad-line servIcon"></i>
+                    <h3 class="servTitle">Game Developer</h3>
+                    <p class="servText">Come up with a game idea. social science concerned with the production, consumption of goods and services.</p>
+                </div>
+                <div class="serviceItem sItem5">
+                    <i class="ri-brain-line servIcon"></i>
+                    <h3 class="servTitle">Economic Science</h3>
+                    <p class="servText">Economics is a social science concerned with the production, consumption of goods and services.</p>
+                </div>
+                <div class="serviceItem sItem6">
+                    <i class="ri-camera-line servIcon"></i>
+                    <h3 class="servTitle">Photography & Video</h3>
+                    <p class="servText">Sessions, if you are a social science concerned with the production, consumption of goods and services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================= PROJECT SECTION ============================ -->
+    <section class="projectSection" id="project">
+        <div class="container">
+            <div class="defaultTitleSection">
+                <h4>My <span>Jobs</span></h4>
+                <h2>Recent Projects</h2>
+            </div>
+            <div class="project-box">
+                <div class="projectItem projItem1">
+                    <img src="./img/project-img-1.jpg" alt="">
+                    <div class="projectInfo">
+                        <strong class="projectSubTitle">Web</strong>
+                        <h2 class="projectTitle">Modern website</h2>
+                        <a href="#" class="projectBtn">
+                            View demo <i class="ri-external-link-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="projectItem projItem1">
+                    <img src="./img/project-img-2.jpg" alt="">
+                    <div class="projectInfo">
+                        <strong class="projectSubTitle">Web</strong>
+                        <h2 class="projectTitle">Modern website</h2>
+                        <a href="#" class="projectBtn">
+                            View demo <i class="ri-external-link-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="projectItem projItem1">
+                    <img src="./img/project-img-3.jpg" alt="">
+                    <div class="projectInfo">
+                        <strong class="projectSubTitle">Web</strong>
+                        <h2 class="projectTitle">Modern website</h2>
+                        <a href="#" class="projectBtn">
+                            View demo <i class="ri-external-link-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="projectItem projItem1">
+                    <img src="./img/project-img-4.jpg" alt="">
+                    <div class="projectInfo">
+                        <strong class="projectSubTitle">Web</strong>
+                        <h2 class="projectTitle">Modern website</h2>
+                        <a href="#" class="projectBtn">
+                            View demo <i class="ri-external-link-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="projectItem projItem1">
+                    <img src="./img/project-img-5.jpg" alt="">
+                    <div class="projectInfo">
+                        <strong class="projectSubTitle">Web</strong>
+                        <h2 class="projectTitle">Modern website</h2>
+                        <a href="#" class="projectBtn">
+                            View demo <i class="ri-external-link-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="projectItem projItem1">
+                    <img src="./img/project-img-6.jpg" alt="">
+                    <div class="projectInfo">
+                        <strong class="projectSubTitle">Web</strong>
+                        <h2 class="projectTitle">Modern website</h2>
+                        <a href="#" class="projectBtn">
+                            View demo <i class="ri-external-link-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contactSection" id="contact">
+        <div class="container">
+            <div class="defaultTitleSection">
+                <h4>Get In <span>Touch</span></h4>
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contactForm">
+                <form action="#">
+                    <div class="inputGroup">
+                        <div class="inputName">
+                            <input type="text" id="name" required>
+                            <label for="name">Enter your name</label>
+                        </div>
+                        <!--
+                        -->
+                        <div class="inputEmail">
+                            <input type="email" id="email" required>
+                            <label for="email">Enter your email</label>
+                        </div>
+                        <!--
+                        -->
+                    </div>
+                    <div class="inputTextarea">
+                        <textarea  id="textarea" cols="30" rows="10" required></textarea>
+                        <label for="textarea">Enter your message</label>
+                    </div>
+                     <button class="Button flash" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="footerSection">
+        <div class="container">
+            <div class="footerContent">
+                <div class="footerLogo">
+                    <a href="#home" class="navLogo">
+                        Rahat <span>サヌ</span>
+                    </a>
+                    <h3>Front-end Developer</h3>
+                </div>
+                <div class="footerIcon">
+                    <ul>
+                        <li><a href="#" class="flash"><i class="ri-github-fill "></i></a></li><!--
+                        --><li><a href="#" class="flash"><i class="ri-dribbble-line "></i></a></li><!--
+                        --><li><a href="#" class="flash"><i class="ri-youtube-line "></i></a></li>
+                    </ul>
+                </div>
+                <div class="footerText">
+                    <p>&#169; Copyright <span>Rahat Hassan</span>. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

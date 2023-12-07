@@ -1,0 +1,316 @@
+/* ======= 320, 360, 480, 478, 767, 991  */
+@media screen and (max-width:1268px) {
+    section {
+        padding: 80px 5%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    /* ================= HEADER SECTION ============= */
+    #header{
+        padding: 20px 5%;
+    }
+
+    
+}
+
+@media screen and (max-width: 1024px) {
+    /* ================= HEADER SECTION ============= */
+    #header{
+        padding: 20px 5%;
+    }
+
+    /* ================= HERO SECTION ========== */
+    section{
+        padding: 60px 5%;
+    }
+    .heroTitle{
+        font-size: 40px;
+    }
+
+
+    /* ============ SERVICE SECTION ============= */
+    .service-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding-top: 40px;
+    }
+
+    /* =============== project sectionn ========== */
+    .project-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding-top: 40px;
+    }
+
+
+    /* footer */
+    .footerText p {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 911px) {
+    .heroSection {
+        height: 100%;
+    }
+    .footerContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footerIcon {
+        text-align: right;
+    }/* footer */
+    .footerText {
+        grid-column: span 2;
+        padding-top: 30px;
+    }
+    .footerText p {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+
+/*  ====================== 769 ============================= */
+@media screen and (max-width:769px) {
+    /* header */
+    .nav .logo{
+        width: 100%;
+    }
+    .navMenu {
+        width: 300px;
+        height: 100dvh;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        padding: 60px 50px 0 0;
+        line-height: 50px;
+        backdrop-filter: blur(40px);
+        transition: right .4s linear;
+        /* display: none; */
+    }
+    input[type="checkbox"]{
+        display: block;
+    }.hambergerMenu{
+        display: block;
+    }
+    .navMenu li{
+        display: block !important;
+        padding: 0 !important;
+        line-height: 60px;
+    }
+    .navMenu li a{
+        font-size: 25px;
+    }
+    /* hero section */
+    .heroSection {
+        height: 100%;
+    }
+    .heroSection .container{
+        grid-template-columns: 1fr;
+    }
+    .heroContent{
+        order: 1;
+        padding-top: 50px !important;
+        padding-right: 0 !important;
+    }
+    .heroBlob {
+        width: 512px;
+    }
+    .heroImg {
+        text-align: center;
+    }
+
+    /* about */
+    .aboutSection .container{        
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .defaultTitleSection {
+        text-align: center;
+    }
+    .aboutImg {
+        text-align: center;
+    }
+
+    /* skill */
+    .skillSection .container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    /* services */
+    .defaultTitleSection h2 {
+        font-size: 36px;
+    }
+    .service-box {
+        gap: 25px;
+        padding-top: 30px;
+    }
+    .serviceItem {
+        padding: 30px 20px;
+    }
+    .serviceItem .servIcon {
+        font-size: 50px;
+    }
+    .serviceItem .servTitle {
+        font-size: 20px;
+    }
+    .serviceItem .servText {
+        font-size: 13px;
+    }
+
+
+    
+
+}
+
+@media screen and (max-width:790px) {
+    .contactForm form {
+        width: 100%;
+    }
+}
+
+/* ======================== 481 ============================= */
+@media screen and (max-width:481px) {
+    /* about */
+    .defaultTitleSection h4 {
+        font-size: 1rem;
+    }
+    .defaultTitleSection h2 {
+        font-size: 35px;
+    }
+
+    /* skill */
+    .tabMenu nav label {
+        font-size: 13px;
+    }
+    .skillList .listItem {
+        font-size: 16px;
+    }
+
+    /* services */    
+    .service-box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* project */
+    .project-box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* contact */
+    .contactForm form .inputGroup {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .inputTextarea {
+        margin-top: 20px;
+    }
+
+    /* footer */
+    .footerContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footerLogo {
+        text-align: left;
+    }
+    .footerLogo h3 {
+        font-size: 14px;
+    }
+    .footerIcon {
+        text-align: right;
+    }
+    .footerText {
+        grid-column: span 2;
+        padding-top: 30px;
+    }
+    .footerIcon ul li:last-child {
+        padding-right: 0;
+    }
+}
+
+
+
+/* ====================== 361 =============== */
+@media screen and (max-width:361px) {
+    /* nav */
+    .navMenu{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        right: 100%;
+    }
+    .navMenu ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* hero */
+    .heroContent {
+        text-align: center;
+    }
+    .heroSubtitle {
+        font-size: 22px !important;
+    }
+    .heroTitle {
+        font-size: 32px;
+    }
+    .heroEducation {
+        font-size: 1rem;
+    }
+    .heroDescription {
+        font-size: 0.9rem;
+    }
+
+    .tabMenu nav label {
+        font-size: 10px;
+    }
+    /* skill */
+    
+    .skillList .listItem {
+        font-size: 15px;
+    }
+    .defaultTitleSection p {
+        font-size: 14px;
+    }
+    /* footer */
+    .footerContent {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footerLogo {
+        text-align: center;
+    }
+    .footerLogo h3 {
+        font-size: 14px;
+    }
+    .footerIcon {
+        text-align: center;
+        padding-top: 30px;
+    }
+    .footerText {
+        grid-column: span 1;
+        padding-top: 30px;
+    }
+    .footerText p {
+        font-size: 12px;
+    }
+    .footerIcon ul li:last-child {
+        padding-right: 0;
+    }
+}
+
+
+
+@media screen and (max-width:321px) {
+    .nav .logo .navLogo {
+        font-size: 26px;
+    }
+    .footerText p {
+        font-size: 14px;
+    }
+}
