@@ -470,7 +470,6 @@ input[type="checkbox"]:checked ~ .navMenu{
 .serviceSection{
     background: var(--background);
 }
-.serviceSection .container{}
 .serviceSection .defaultTitleSection {
 	text-align: center;
 }
@@ -604,11 +603,9 @@ input[type="checkbox"]:checked ~ .navMenu{
 
 
 /* ================= CONTACT SECTION =================== */
-.contactSection{}
 .contactSection .defaultTitleSection{
     text-align: center;
 }
-.contactForm{}
 .contactForm form {
 	width: 600px;
 	margin: auto;
@@ -753,7 +750,6 @@ section.footerSection{
     filter: drop-shadow(0 18px 18px var(--box-shadow));
     transition: transform .3s ease-in-out;
 }
-.footerText{}
 .footerText p{
     text-align: right;
     color: var(--blackColor);
