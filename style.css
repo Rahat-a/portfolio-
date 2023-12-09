@@ -1,21 +1,5 @@
 /* ------------ root css --------- */
-:root{
-    /* --------- font  and typography --------- */
-    --bodyFont: "Poppins", sans-serif;
-
-    --px5: 0.3125rem;
-    --px20: 1.25rem;
-    --px60: 3.75rem;
-    --px40: 2.5rem;
-
-
-    /*  ----------- font wight ------------ */
-    --fontNormal: 300;
-    --fontRegular: 400;
-    --fontBold: 500;
-    --fontSemiBold: 600;
-    --fontExtraBold: 700;
-    
+:root{    
     /* ---------- color --------------- */
     --firstColor:#D0637C;
     --secondColor:#DD868C;
@@ -40,7 +24,7 @@
 }
 body{
     background: var(--background);
-    font-family: var(--bodyFont);
+    font-family:  "Poppins", sans-serif;
 }
 html{
     scroll-behavior: smooth;
@@ -71,8 +55,8 @@ section{
 /* ============ HEADER CSS ================== */
 #header{
     background: #EDEEF310;
-    backdrop-filter: blur(20px);
-    padding: var(--px20) 0;
+    backdrop-filter: blur(1.25rem);
+    padding: 1.25rem 0;
     position: fixed;
     width: 100%;
     z-index: 9;
@@ -88,19 +72,19 @@ section{
 .nav .logo .navLogo {
     display: inline-block;
     color: var(--blackColor);
-    font-weight: var(--fontSemiBold);
+    font-weight: 600;
     font-size: 30px;
 }
 .nav .logo .navLogo span{
     color: var(--firstColor);
-    font-weight: var(--fontSemiBold);
+    font-weight: 600;
 }
 .navMenu{
     text-align: end;
 }
 .navMenu ul li{
     display: inline-block;
-    padding-right: var(--px20);
+    padding-right: 1.25rem;
 }
 .navMenu ul li:last-child{
     padding-right: 0;
@@ -108,7 +92,7 @@ section{
 .navMenu ul li a{
     display: inline-block;
     color: var(--blackColor);
-    font-weight: var(--fontSemiBold);
+    font-weight: 600;
     text-transform: capitalize;
     transition: color .3s ease;
 }
@@ -172,7 +156,7 @@ input[type="checkbox"]:checked ~ .hambergerMenu .topLine{
     width: 30px;
 }
 input[type="checkbox"]:checked ~ .hambergerMenu .middleLine{
-    /* transform: translateX(20px); */
+    /* transform: translateX(1.25rem); */
     opacity: 0;
 }
 input[type="checkbox"]:checked ~ .hambergerMenu .endLine{
@@ -197,25 +181,25 @@ input[type="checkbox"]:checked ~ .navMenu{
     align-items: center;
 }
 .heroContent{
-    padding-right: var(--px60);
+    padding-right: 3.75rem;
 }
 .heroSubtitle{
     color: var(--blackColor);
     font-size: 25px;
-    font-weight: var(--fontSemiBold);
+    font-weight: 600;
 }
 .heroSubtitle span{
     color: var(--firstColor);
 }
 .heroTitle{
     color: var(--firstColor);
-    font-size: var(--px60);
-    font-weight: var(--fontExtraBold);
+    font-size: 3.75rem;
+    font-weight: 700;
 }
 .heroEducation{
     color: var(--blackColor);
-    font-weight: var(--fontBold);
-    font-size: var(--px20);
+    font-weight: 500;
+    font-size: 1.25rem;
     padding-bottom: 1rem;
 }
 .heroDescription{
@@ -228,7 +212,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 	font-size: 1rem;
 	padding: 15px 25px;
 	background: var(--firstColor);
-	border-radius: var(--px5);
+	border-radius: 0.3125rem;
     filter: drop-shadow(0 8px 8px var(--box-shadow));
     transition: all 1s ease-in-out;
     cursor: pointer;
@@ -238,7 +222,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 .flash::before{
     content: '';
     position: absolute;
-    top: -20px;left: -30px;
+    top: -1.25rem;left: -30px;
     width: 15px;
     height: 80px;
     background: var(--background);
@@ -249,11 +233,11 @@ input[type="checkbox"]:checked ~ .navMenu{
     transform:skewX(155deg) translateX(190px);
 }
 .heroSocial{
-    padding-top: var(--px40);
+    padding-top: 2.5rem;
 }
 .heroSocial ul li{
     display: inline-block;
-    padding-right: var(--px20);
+    padding-right: 1.25rem;
 }
 .heroSocial ul li a {
     display: inline-block;
@@ -263,7 +247,7 @@ input[type="checkbox"]:checked ~ .navMenu{
     text-align: center;
 	background: var(--firstColor);
 	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-	padding: var(--px5);
+	padding: 0.3125rem;
     filter: drop-shadow(0 18px 18px var(--box-shadow));
     transition: transform .3s ease-in-out;
 }
@@ -295,7 +279,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 .aboutSection .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--px60);
+    gap: 3.75rem;
     align-items: center;
 }
 .aboutImg .aboutsvg {
@@ -307,7 +291,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 .defaultTitleSection h4{    
     color: var(--blackColor);
     font-size: 1.0625rem;
-    font-weight: var(--fontSemiBold);
+    font-weight: 600;
 }
 .defaultTitleSection h4 span{
     color: var(--firstColor);
@@ -315,12 +299,12 @@ input[type="checkbox"]:checked ~ .navMenu{
 .defaultTitleSection h2{
     font-size: 40px;
     color: var(--blackColor);
-    font-weight: var(--fontSemiBold);
+    font-weight: 600;
     text-transform: capitalize;
 }
 .defaultTitleSection p{
     color: var(--blackColor);
-    padding-bottom: var(--px40);
+    padding-bottom: 2.5rem;
 }
 
 
@@ -344,9 +328,9 @@ input[type="checkbox"]:checked ~ .navMenu{
 }
 .tabMenu nav label {
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 10px 1.25rem;
 	background: var(--secBackground);
-	margin-right: 20px;
+	margin-right: 1.25rem;
     border: 1px solid var(--tab-border);
     border-bottom: none;
 	border-radius:15px 15px 0 0;
@@ -391,7 +375,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 }
 
 .tabContent-box{
-	padding: 25px 0 50px 20px;
+	padding: 25px 0 50px 1.25rem;
 	border: 1px solid;
     border-color: var(--tab-border) !important;
     border-top: 2px solid !important;
@@ -399,7 +383,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 }
 .skillList{
     columns: 10px 2;
-    column-gap: 20px;
+    column-gap: 1.25rem;
 }
 .skillList .listItem {
     color: var(--blackColor);
@@ -421,14 +405,14 @@ input[type="checkbox"]:checked ~ .navMenu{
 	margin-bottom: 10px;
     font-size: 1rem;
     color: var(--blackColor);
-    font-weight: var(--fontBold);
+    font-weight: 500;
 }
 .progressBar {
 	position: relative;
 	width: 90%;
-	height: 5px;
+	height: 0.3125rem;
 	background: var(--progressSubColor);
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 }
 .parcentage {
 	position: absolute;
@@ -436,7 +420,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 	left: 0;
 	height: 100%;
 	background: var(--firstColor);
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 }
 .preg1 .parcentage {    
 	width: 95%;
@@ -462,7 +446,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 	bottom: 10px;
 	color: var(--blackColor);
     font-size: 1rem;
-    font-weight: var(--fontRegular);
+    font-weight: 400;
 }
 
 
@@ -583,17 +567,17 @@ input[type="checkbox"]:checked ~ .navMenu{
 .projectInfo .projectSubTitle{
     color: var(--whiteColor);
     font-size: 15px;
-    font-weight: var(--fontRegular);
+    font-weight: 400;
 }
 .projectInfo .projectTitle{
     color: var(--whiteColor);
     font-size: 25px;
-    font-weight: var(--fontSemiBold);
+    font-weight: 600;
 }
 .projectInfo .projectBtn{
     color: var(--whiteColor);
     font-size: 14px;
-    font-weight: var(--fontBold);
+    font-weight: 500;
 }
 
 .projectInfo .projectBtn i{
@@ -629,7 +613,7 @@ input[type="checkbox"]:checked ~ .navMenu{
     width: 100%;
 	border-radius: 8px;
     color: var(--blackColor);
-    font-family: var(--bodyFont);
+    font-family:  "Poppins", sans-serif;
     background: var(--secBackground);
     border: 1px solid var(--secBackground);
     position: relative;
@@ -666,7 +650,7 @@ form .inputGroup input:valid ~ label{
 	border-radius: 8px;
 	resize: none;
     color: var(--blackColor);
-    font-family: var(--bodyFont);
+    font-family:  "Poppins", sans-serif;
     background: var(--secBackground);
     border: 1px solid var(--secBackground);
 }
@@ -701,11 +685,11 @@ form .inputTextarea textarea:valid ~ label{
 	text-align: center;
 	font-size: 16px;
     font-weight: 600;
-    font-family: var(--bodyFont);
+    font-family:  "Poppins", sans-serif;
     margin-top: 30px;
 }
 .contactForm .flash:hover::before {
-	transform: skewX(155deg) translateX(220px);
+	transform: skewX(155deg) translateX(21.25rem);
 }
 
 /* ================= FOOTER SECTION ============== */
@@ -736,7 +720,7 @@ section.footerSection{
 }
 .footerIcon ul li{
     display: inline-block;
-    padding-right: var(--px20);
+    padding-right: 1.25rem;
 }
 .footerIcon ul li a {
     display: inline-block;
@@ -746,7 +730,7 @@ section.footerSection{
     text-align: center;
 	background: var(--firstColor);
 	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-	padding: var(--px5);
+	padding: 0.3125rem;
     filter: drop-shadow(0 18px 18px var(--box-shadow));
     transition: transform .3s ease-in-out;
 }
