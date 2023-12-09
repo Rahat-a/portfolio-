@@ -1,19 +1,128 @@
+
+/* 
+=========== primary color variation ========
+1. green {
+    --firstColor:#26a69a;
+    --background: #E8FAF8;
+    --secBackground: #F4FDFC;
+    --box-shadow: rgba(38, 166, 154, .4);
+    --progressSubColor:rgba(38, 166, 154, .2);
+}
+2. puple {
+    --firstColor:#a688fa;
+    --background: #F7F4FF;
+    --secBackground: #FDFDFF;
+    --box-shadow: rgba(166, 136, 250, .4);
+    --progressSubColor:rgba(166, 136, 250, .2);
+}
+3. orange {
+    --firstColor:#f75833;
+    --background: #FFEAE5;
+    --secBackground: #F4F1F0;
+    --box-shadow: rgba(247, 88, 51, .4);
+    --progressSubColor:rgba(247, 88, 51, .2);
+}
+4. summer sky(blue) {
+    --background: #EAF9FD;
+    --secBackground: #F3FCFF;
+    --firstColor: #19bde1;
+    --box-shadow: rgba(25, 189, 225, .4);
+    --progressSubColor:rgba(25, 189, 225, .2);  
+}
+6. green fern {
+    --background: #F4FFF5;
+    --secBackground: #FDFFFD;
+    --firstColor: #66bb6a;
+    --box-shadow: rgba(102, 187, 106, .4);
+    --progressSubColor:rgba(102, 187, 106, .2);  
+}
+*/
+
 /* ------------ root css --------- */
-:root{    
-    /* ---------- color --------------- */
+/* ========== ORGINAL ============ */
+:root,  
+[data-selected-theme="default-white"]{
     --firstColor:#D0637C;
     --secondColor:#DD868C;
-    --background: #EDEEF3;
-    --secBackground: #f5e5e7;
+    --background: #f5e5e7;
+    --secBackground: #EDEEF3;
+    --White: #F5F6F8;
+    --Black: #202731;
     --whiteColor: #F5F6F8;
     --blackColor: #202731;
-    --semiBlack: #4B5056 /* #333333 */;
-    --box-shadow: rgba(208, 99, 124, .4);
+    --semiBlack: #4B5056 ;
     --tab-border: #cecccc;
-    --progressSubColor:rgba(208,99,124, .1);
-    
+    --box-shadow: rgba(208, 99, 124, .4);
+    --progressSubColor:rgba(208,99,124, .2);    
 }
 
+[data-selected-theme="dark"]{
+    --secondColor:#DD868C;
+    --background: #121212;
+    --secBackground: #18191a;
+    --White: #f5f6f8;
+    --darkWhite: #f5f6f8
+    --Black: #202731;
+    --whiteColor: #202731;
+    --blackColor: #F5F6F8;
+    --firstColor: #8d6e63;
+    --box-shadow: rgba(141, 110, 99, .4);
+    --progressSubColor:rgba(141, 110, 99, .2);
+    --tab-border: #cecccc;
+    
+}
+/* ===== dark theme for backup */
+/* [data-selected-theme="dark"]{
+    --secondColor:#DD868C;
+    --background: #121212;
+    --secBackground: #18191a;
+    --White: #f5f6f8;
+    --darkWhite: #f5f6f8
+    --Black: #202731;
+    --whiteColor: #202731;
+    --blackColor: #F5F6F8;
+    --firstColor: #8d6e63;
+    --box-shadow: rgba(141, 110, 99, .4);
+    --progressSubColor:rgba(141, 110, 99, .2);
+    --tab-border: #cecccc;
+    
+} */
+
+[data-selected-theme="green"]{
+    --firstColor:#26a69a;
+    --background: #E8FAF8;
+    --secBackground: #F4FDFC;
+    --box-shadow: rgba(38, 166, 154, .4);
+    --progressSubColor:rgba(38, 166, 154, .2);
+}
+[data-selected-theme="purple"]{
+    --firstColor:#a688fa;
+    --background: #F7F4FF;
+    --secBackground: #FDFDFF;
+    --box-shadow: rgba(166, 136, 250, .4);
+    --progressSubColor:rgba(166, 136, 250, .2);
+}
+[data-selected-theme="orange"]{
+    --firstColor:#f75833;
+    --background: #FFEAE5;
+    --secBackground: #F4F1F0;
+    --box-shadow: rgba(247, 88, 51, .4);
+    --progressSubColor:rgba(247, 88, 51, .2);
+}
+[data-selected-theme="blue"]{
+    --background: #EAF9FD;
+    --secBackground: #F3FCFF;
+    --firstColor: #19bde1;
+    --box-shadow: rgba(25, 189, 225, .4);
+    --progressSubColor:rgba(25, 189, 225, .2); 
+}
+[data-selected-theme="green-fern"]{
+    --background: #F4FFF5;
+    --secBackground: #FDFFFD;
+    --firstColor: #66bb6a;
+    --box-shadow: rgba(102, 187, 106, .4);
+    --progressSubColor:rgba(102, 187, 106, .2); 
+}
 
 /* --------------- Base css ---------------- */
 
@@ -28,6 +137,10 @@ body{
 }
 html{
     scroll-behavior: smooth;
+}
+::selection{
+    background: var(--firstColor);
+    color: white;
 }
 input, textarea, button{
     outline: none;
@@ -170,7 +283,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 }
 /* =============== HERO SECTION ============== */
 .heroSection{
-    background: var(--secBackground);
+    background: var(--background);
     width: 100%;
     height: 100dvh;
     padding-top: 130px;
@@ -208,7 +321,7 @@ input[type="checkbox"]:checked ~ .navMenu{
     padding-bottom: 1.2rem;
 }
 .Button {
-    color: var(--background);
+    color: var(--White);
 	font-size: 1rem;
 	padding: 15px 25px;
 	background: var(--firstColor);
@@ -225,7 +338,7 @@ input[type="checkbox"]:checked ~ .navMenu{
     top: -1.25rem;left: -30px;
     width: 15px;
     height: 80px;
-    background: var(--background);
+    background: var(--White);
     transform: skewX(155deg) translateX(0);
     transition: all .5s ease-in-out;
 }
@@ -241,7 +354,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 }
 .heroSocial ul li a {
     display: inline-block;
-	color: var(--background);
+	color: var(--White);
 	font-size: 1.3rem;
     width: 35px;
     text-align: center;
@@ -274,7 +387,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 
 /* ============ ABOUT SECTION ========================== */
 .aboutSection{
-    background: var(--background);
+    background: var(--secBackground);
 }
 .aboutSection .container{
     display: grid;
@@ -310,7 +423,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 
 /* ============== SKILL SECTION ============ */
 .skillSection{
-    background: var(--secBackground);
+    background: var(--background);
 }
 .skillSection .container{
     display: grid;
@@ -329,6 +442,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 .tabMenu nav label {
 	display: inline-block;
 	padding: 10px 1.25rem;
+    color: var(--blackColor);
 	background: var(--secBackground);
 	margin-right: 1.25rem;
     border: 1px solid var(--tab-border);
@@ -339,15 +453,16 @@ input[type="checkbox"]:checked ~ .navMenu{
 }
 .tabMenu nav label:hover{
     background: var(--firstColor);
-    color: var(--background);
+    color: var(--White);
+    border-color: var(--firstColor);
 }
 .tabMenu nav label:last-child{
     margin-right: 0;
 }
 #tab1:checked ~ nav label.tab1,
 #tab2:checked ~ nav label.tab2{
+    color: var(--White);
     background: var(--firstColor);
-    color: var(--background);
     border-color: transparent;
 }
 
@@ -452,7 +567,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 
 /* ======================== SERVICE SECTION =================== */
 .serviceSection{
-    background: var(--background);
+    background: var(--secBackground);
 }
 .serviceSection .defaultTitleSection {
 	text-align: center;
@@ -465,7 +580,7 @@ input[type="checkbox"]:checked ~ .navMenu{
 }
 .serviceItem {
 	color: var(--blackColor);
-	background: var(--secBackground);
+	background: var(--background);
 	padding: 40px 30px;
 	text-align: center;
 	border-radius: 10px;
@@ -493,9 +608,7 @@ input[type="checkbox"]:checked ~ .navMenu{
     color: var(--firstColor);
     transition: .4s ease-in;
 }
-.serviceItem:hover .servIcon{
-    color: var(--whiteColor);
-}
+
 .serviceItem .servTitle {
 	font-size: 25px;
 	font-weight: 600;
@@ -503,21 +616,22 @@ input[type="checkbox"]:checked ~ .navMenu{
     color: var(--blackColor);
     transition: .4s ease-in;
 }
-.serviceItem:hover .servTitle{
-    color: var(--whiteColor);
-}
 .serviceItem .servText{
     color: var(--blackColor);
     transition: .4s ease-in;
 }
+.serviceItem:hover .servIcon,
+.serviceItem:hover .servTitle,
 .serviceItem:hover .servText{
-    color: var(--whiteColor);
+    color: var(--White);
 }
+
+
 
 
 /* ============ PROJECT ======== */
 .projectSection{
-    background: var(--secBackground);
+    background: var(--background);
 }
 .projectSection .defaultTitleSection {
 	text-align: center;
@@ -565,17 +679,17 @@ input[type="checkbox"]:checked ~ .navMenu{
     visibility: visible;
 }
 .projectInfo .projectSubTitle{
-    color: var(--whiteColor);
+    color: var(--White);
     font-size: 15px;
     font-weight: 400;
 }
 .projectInfo .projectTitle{
-    color: var(--whiteColor);
+    color: var(--White);
     font-size: 25px;
     font-weight: 600;
 }
 .projectInfo .projectBtn{
-    color: var(--whiteColor);
+    color: var(--White);
     font-size: 14px;
     font-weight: 500;
 }
@@ -587,6 +701,9 @@ input[type="checkbox"]:checked ~ .navMenu{
 
 
 /* ================= CONTACT SECTION =================== */
+.contactSection{
+    background: var(--secBackground);
+}
 .contactSection .defaultTitleSection{
     text-align: center;
 }
@@ -614,8 +731,8 @@ input[type="checkbox"]:checked ~ .navMenu{
 	border-radius: 8px;
     color: var(--blackColor);
     font-family:  "Poppins", sans-serif;
-    background: var(--secBackground);
-    border: 1px solid var(--secBackground);
+    background: var(--background);
+    border: 1px solid var(--background);
     position: relative;
 }
 .inputGroup label{
@@ -627,6 +744,7 @@ input[type="checkbox"]:checked ~ .navMenu{
     color: var(--blackColor);
     font-size: 14px;
     padding: 0;
+    opacity: 0.6;
     border-radius: 3px;
     transition: .3s ease-in;
 }
@@ -638,8 +756,9 @@ form .inputGroup input:focus ~ label,
 form .inputGroup input:valid ~ label{
     top: 0;
     padding: 0px 10px;
-    color: var(--whiteColor);
+    color: var(--White);
     background: var(--firstColor);
+    opacity: 1;
 }
 
 
@@ -651,12 +770,12 @@ form .inputGroup input:valid ~ label{
 	resize: none;
     color: var(--blackColor);
     font-family:  "Poppins", sans-serif;
-    background: var(--secBackground);
-    border: 1px solid var(--secBackground);
+    background: var(--background);
+    border: 1px solid var(--background);
 }
 .inputTextarea{
     position: relative;
-	margin-top: 30px;
+	margin: 30px 0px;
 }
 .inputTextarea label{
     position: absolute;
@@ -667,6 +786,7 @@ form .inputGroup input:valid ~ label{
     color: var(--blackColor);
     font-size: 14px;
     padding: 0;
+    opacity: 0.6;
     border-radius: 3px;
     transition: .3s ease-in;
 }
@@ -678,15 +798,15 @@ form .inputTextarea textarea:focus ~ label,
 form .inputTextarea textarea:valid ~ label{
     top: 0;
     padding: 0px 10px;
-    color: var(--whiteColor);
+    color: var(--White);
     background: var(--firstColor);
+    opacity: 1;
 }
 .contactForm form button {
 	text-align: center;
 	font-size: 16px;
     font-weight: 600;
     font-family:  "Poppins", sans-serif;
-    margin-top: 30px;
 }
 .contactForm .flash:hover::before {
 	transform: skewX(155deg) translateX(21.25rem);
@@ -695,7 +815,7 @@ form .inputTextarea textarea:valid ~ label{
 /* ================= FOOTER SECTION ============== */
 section.footerSection{
     padding: 30px;
-    background: var(--secBackground);
+    background: var(--background);
 }
 .footerContent{
     display: grid;
@@ -724,7 +844,7 @@ section.footerSection{
 }
 .footerIcon ul li a {
     display: inline-block;
-	color: var(--background);
+	color: var(--White);
 	font-size: 1.3rem;
     width: 35px;
     text-align: center;
