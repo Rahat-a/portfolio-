@@ -164,6 +164,39 @@ section{
     margin: auto;
 }
 
+/*  ================ THEME SWITCHER ============== */
+.themeSwitcher {
+	width: 250px;
+	height: auto;
+	background: rebeccapurple;
+	position: absolute;
+	top: 130px;
+	right: 0;
+    z-index: 9;
+}
+.themeSetting{
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: -8px;
+    left: -50px;
+    padding-left: 20px;
+}
+.themeSetting i{
+    display: block;
+    font-size: 36px;
+    color: var(--White);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    backdrop-filter: blur(50px);
+    border-radius: 25px 0 0 25px;
+    padding-left: 20px;
+}
+.themeColor-box{}
+.themeColor-box button{}
 
 /* ============ HEADER CSS ================== */
 #header{
