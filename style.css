@@ -23,16 +23,16 @@
     --progressSubColor:rgba(247, 88, 51, .2);
 }
 4. summer sky(blue) {
+    --firstColor: #19bde1;
     --background: #EAF9FD;
     --secBackground: #F3FCFF;
-    --firstColor: #19bde1;
     --box-shadow: rgba(25, 189, 225, .4);
     --progressSubColor:rgba(25, 189, 225, .2);  
 }
 6. green fern {
+    --firstColor: #66bb6a;
     --background: #F4FFF5;
     --secBackground: #FDFFFD;
-    --firstColor: #66bb6a;
     --box-shadow: rgba(102, 187, 106, .4);
     --progressSubColor:rgba(102, 187, 106, .2);  
 }
@@ -166,37 +166,85 @@ section{
 
 /*  ================ THEME SWITCHER ============== */
 .themeSwitcher {
-	width: 250px;
+	width: 216px;
 	height: auto;
-	background: rebeccapurple;
-	position: absolute;
+	position: fixed;
 	top: 130px;
-	right: 0;
+	right: 10px;
     z-index: 9;
+    /* background: var(--firstColor); */
+    backdrop-filter: blur(80px);
+    padding: 15px 0px;
+    text-align: center;
+    box-shadow: 0 0 0px 10px var(--box-shadow);
 }
 .themeSetting{
     display: block;
     text-align: center;
     position: absolute;
-    top: -8px;
-    left: -50px;
-    padding-left: 20px;
+    top: 0px;
+    left: -70px;
 }
 .themeSetting i{
     display: block;
     font-size: 36px;
+    font-weight: 600;
     color: var(--White);
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: var(--firstColor);
     text-align: center;
     cursor: pointer;
-    backdrop-filter: blur(50px);
-    border-radius: 25px 0 0 25px;
-    padding-left: 20px;
+    border-radius: 50%;
 }
 .themeColor-box{}
-.themeColor-box button{}
+.themeColor-box h3{
+    color: var(--Black);
+    padding-bottom: 8px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 1px solid var(--Black);
+}
+.themeColorButton{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    justify-items: center;
+    padding: 20px 20px 8px;
+    width: 100%;
+}
+.themeColor-box button{
+    width: 35px;height: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+}.themeColor-box{
+    color: #D0637C;
+    color: #26a69a;
+    color: #a688fa;
+    color: #f75833;
+    color: #19bde1;
+    color: #66bb6a;
+}
+.themeColorButton button:nth-child(1){
+    background: #D0637C;
+}
+.themeColorButton button:nth-child(2){
+    background: #26a69a;
+}
+.themeColorButton button:nth-child(3){
+    background: #a688fa;
+}
+.themeColorButton button:nth-child(4){
+    background: #f75833;
+}
+.themeColorButton button:nth-child(5){
+    background: #19bde1;
+}
+.themeColorButton button:nth-child(6){
+    background: #66bb6a;
+}
 
 /* ============ HEADER CSS ================== */
 #header{
