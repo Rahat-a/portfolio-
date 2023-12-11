@@ -41,7 +41,7 @@
 /* ------------ root css --------- */
 /* ========== ORGINAL ============ */
 :root,  
-[data-selected-theme="default-white"]{
+[data-selected-theme="default"]{
     --firstColor:#D0637C;
     --secondColor:#DD868C;
     --background: #f5e5e7;
@@ -172,18 +172,18 @@ section{
 	top: 130px;
 	right: 10px;
     z-index: 9;
-    /* background: var(--firstColor); */
-    backdrop-filter: blur(80px);
+    backdrop-filter: blur(100px);
     padding: 15px 0px;
     text-align: center;
     box-shadow: 0 0 0px 10px var(--box-shadow);
+    transition: .4s ease-in;
 }
 .themeSetting{
     display: block;
     text-align: center;
     position: absolute;
     top: 0px;
-    left: -70px;
+    left: -80px;
 }
 .themeSetting i{
     display: block;
@@ -217,9 +217,20 @@ section{
 }
 .themeColor-box button{
     width: 35px;height: 35px;
-    border-radius: 20px;
+    border-radius: 50%;
     cursor: pointer;
-}.themeColor-box{
+}
+.themeColor-box button[aria-pressed="true"]{
+    box-shadow: 0 0 0 2px var(--firstColor);
+    border: 2px solid var(--White);
+}
+.themeColor-box button[aria-pressed="true"]:is(:hover){
+    opacity: 1;
+}
+.themeColor-box button:is(:hover){
+    opacity: .5;
+}
+.themeColor-box{
     color: #D0637C;
     color: #26a69a;
     color: #a688fa;
