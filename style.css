@@ -198,7 +198,6 @@ section{
     cursor: pointer;
     border-radius: 50%;
 }
-.themeColor-box{}
 .themeColor-box h3{
     color: var(--Black);
     padding-bottom: 8px;
