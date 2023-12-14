@@ -48,24 +48,4 @@ const handleThemeSelection = (event) =>{
     prevBtn.setAttribute('aria-pressed', false);
     event.target.setAttribute('aria-pressed', true);
 
-    // save theme in local storage
-    localStorage.setItem('selected-theme', theme);
 }
-const saveTheme = localStorage.getItem('selected-theme');
-const defaultTheme = "default";
-
-if (saveTheme && saveTheme !== defaultTheme) {
-    const prevBtn = document.querySelector('[data-theme][aria-pressed="true"]');
-    prevBtn.setAttribute('aria-pressed', false);
-
-    document.querySelector(`[data-theme="${saveTheme}"]`).setAttribute('aria-pressed',true);
-
-    document.documentElement.setAttribute("data-selected-theme", saveTheme);
-}
-
-// Adds the handleThemeSelection as a click handler to each of the buttons
-
-themeColorButton.forEach((button) =>{
-    button.addEventListener('click', handleThemeSelection);
-    // document.documentElement.setAttribute("data-theme", button)
-});
