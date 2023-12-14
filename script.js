@@ -49,3 +49,9 @@ const handleThemeSelection = (event) =>{
     event.target.setAttribute('aria-pressed', true);
 
 }
+// Adds the handleThemeSelection as a click handler to each of the buttons
+
+themeColorButton.forEach((button) =>{
+    button.addEventListener('click', handleThemeSelection);
+    // document.documentElement.setAttribute("data-theme", button)
+});
