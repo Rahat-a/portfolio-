@@ -30,13 +30,28 @@
         </div>
         <div class="themeColor-box">
             <h3>Chose your theme</h3>
+            <div class="themeLightDark">
+                <span>Light</span>
+                <label class="darkMode" id="dark"></label>
+                <span class="dark">Dark</span>
+            </div>
             <div class="themeColorButton">
-            <button data-theme="default" aria-pressed="true"></button>
-            <button data-theme="green" aria-pressed="false"></button>
-            <button data-theme="purple" aria-pressed="false"></button>
-            <button data-theme="orange" aria-pressed="false"></button>
-            <button data-theme="blue" aria-pressed="false"></button>
-            <button data-theme="green-fern" aria-pressed="false"></button>
+                <div class="themeLight none">
+                    <button data-theme="default" aria-pressed="true"></button>
+                    <button data-theme="green" aria-pressed="false"></button>
+                    <button data-theme="purple" aria-pressed="false"></button>
+                    <button data-theme="orange" aria-pressed="false"></button>
+                    <button data-theme="blue" aria-pressed="false"></button>
+                    <button data-theme="green-fern" aria-pressed="false"></button>
+                </div>
+                <div class="themeDark active">
+                    <button data-theme="defaultDark" aria-pressed="true"></button>
+                    <button data-theme="greenDark" aria-pressed="false"></button>
+                    <button data-theme="purpleDark" aria-pressed="false"></button>
+                    <button data-theme="orangeDark" aria-pressed="false"></button>
+                    <button data-theme="blueDark" aria-pressed="false"></button>
+                    <button data-theme="green-fernDark" aria-pressed="false"></button>
+                </div>
             </div>
         </div>
     </div>

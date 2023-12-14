@@ -13,22 +13,34 @@ function checkUncheck() {
 }
 
 // theme switcher
-var themeSwitcher = document.querySelector(".themeSwitcher")
-var themeOpen = document.querySelector(".themeSetting")
-var iconFlip = document.querySelector(".themeSetting i")
+// var themeSwitcher = document.querySelector(".themeSwitcher")
+// var themeOpen = document.querySelector(".themeSetting")
+// var iconFlip = document.querySelector(".themeSetting i")
 
-themeSwitcher.style.right = "-230px";
-iconFlip.style.transform="scaleX(1)";
-themeOpen.onclick = function(){
-    if ((themeSwitcher.style.right == "-230px")&&(iconFlip.style.transform="scaleX(1)")) {
-        themeSwitcher.style.right = "10px";
-        iconFlip.style.transform="scaleX(-1)"
-    }else{
-        themeSwitcher.style.right = "-230px";
-        iconFlip.style.transform="scaleX(1)";
-    }
-}
+// themeSwitcher.style.right = "-230px";
+// iconFlip.style.transform="scaleX(1)";
+// themeOpen.onclick = function(){
+//     if ((themeSwitcher.style.right == "-230px")&&(iconFlip.style.transform="scaleX(1)")) {
+//         themeSwitcher.style.right = "10px";
+//         iconFlip.style.transform="scaleX(-1)"
+//     }else{
+//         themeSwitcher.style.right = "-230px";
+//         iconFlip.style.transform="scaleX(1)";
+//     }
+// }
 
+
+// =================== Light Dark toggle ==============
+// var darkMode = document.getElementById('dark');
+// darkMode.addEventListener('click', function(){
+//     darkMode.classList.toggle('active');
+// })
+// // is DarkMode on then dark color pelete position
+// var darkOn = document.querySelector('.darkMode');
+// var darkpalette = document.querySelector('.themeDark');
+// darkOn.onclick = function(){
+//     darkpalette.classList.toggle('activee')
+// }
 
 
 // ============  theme colro switche by https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/
