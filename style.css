@@ -320,7 +320,7 @@ section{
     transition: .2s ease-in;
     transform-origin: bottom;
 }
-.themeDark.active{
+.themeDark.activee{
     position: relative;
     bottom: 0;
     width: 100%;
