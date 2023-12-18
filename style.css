@@ -41,7 +41,7 @@
 /* ------------ root css --------- */
 /* ========== ORGINAL ============ */
 :root,  
-[data-selected-theme="default"]{
+[data-selected-theme="defaultWhite"]{
     --firstColor:#D0637C;
     --secondColor:#DD868C;
     --background: #f5e5e7;
@@ -61,7 +61,7 @@
     --background: #121212;
     --secBackground: #18191a;
     --White: #f5f6f8;
-    --darkWhite: #f5f6f8
+    --darkWhite: #f5f6f8;
     --Black: #202731;
     --whiteColor: #202731;
     --blackColor: #F5F6F8;
@@ -110,69 +110,80 @@
     --progressSubColor:rgba(247, 88, 51, .2);
 }
 [data-selected-theme="blue"]{
+    --firstColor: #19bde1;
     --background: #EAF9FD;
     --secBackground: #F3FCFF;
-    --firstColor: #19bde1;
     --box-shadow: rgba(25, 189, 225, .4);
     --progressSubColor:rgba(25, 189, 225, .2); 
 }
 [data-selected-theme="green-fern"]{
+    --firstColor: #66bb6a;
     --background: #F4FFF5;
     --secBackground: #FDFFFD;
-    --firstColor: #66bb6a;
     --box-shadow: rgba(102, 187, 106, .4);
     --progressSubColor:rgba(102, 187, 106, .2); 
 }
 /* dark */
 [data-selected-theme="defaultDark"]{
-    --firstColor:#e04569;
+    --firstColor: #D0637C;
     --secondColor:#DD868C;
-    --background: #f5e5e7;
-    --secBackground: #EDEEF3;
-    --White: #F5F6F8;
+    --background: #0D0406;
+    --secBackground: #110C0D;
+    --White: #f5f6f8;
     --Black: #202731;
-    --whiteColor: #F5F6F8;
-    --blackColor: #202731;
-    --semiBlack: #4B5056 ;
-    --tab-border: #cecccc;
+    --whiteColor: #202731;
+    --blackColor: #F5F6F8;
     --box-shadow: rgba(208, 99, 124, .4);
-    --progressSubColor:rgba(208,99,124, .2);    
+    --progressSubColor:rgba(208,99,124, .2); 
+    --darkWhite: #f5f6f8;
+    --tab-border: #cecccc;    
 }
 [data-selected-theme="greenDark"]{
-    --firstColor:#14312e;
-    --background: #E8FAF8;
-    --secBackground: #F4FDFC;
+    --firstColor:#26a69a;
+    --background: #010404;
+    --secBackground: #0d0f0f;
+    --whiteColor: #202731;
+    --blackColor: #F5F6F8;
     --box-shadow: rgba(38, 166, 154, .4);
     --progressSubColor:rgba(38, 166, 154, .2);
 }
 [data-selected-theme="purpleDark"]{
-    --firstColor:#5b23f7;
-    --background: #F7F4FF;
-    --secBackground: #FDFDFF;
+    --firstColor:#a688fa;
+    --background: #080313;
+    --secBackground: #0f0c17;
+    --whiteColor: #202731;
+    --blackColor: #F5F6F8;
     --box-shadow: rgba(166, 136, 250, .4);
     --progressSubColor:rgba(166, 136, 250, .2);
 }
 [data-selected-theme="orangeDark"]{
     --firstColor:#f75833;
-    --background: #FFEAE5;
-    --secBackground: #F4F1F0;
+    --background: #0d0200;
+    --secBackground: #17100e;
+    --whiteColor: #202731;
+    --blackColor: #F5F6F8;
     --box-shadow: rgba(247, 88, 51, .4);
     --progressSubColor:rgba(247, 88, 51, .2);
 }
 [data-selected-theme="blueDark"]{
-    --background: #EAF9FD;
-    --secBackground: #F3FCFF;
     --firstColor: #19bde1;
+    --background: #021114;
+    --secBackground: #020b0d;
+    --whiteColor: #202731;
+    --blackColor: #F5F6F8;
     --box-shadow: rgba(25, 189, 225, .4);
     --progressSubColor:rgba(25, 189, 225, .2); 
 }
 [data-selected-theme="green-fernDark"]{
-    --background: #F4FFF5;
-    --secBackground: #FDFFFD;
     --firstColor: #66bb6a;
+    --background: #020903;
+    --secBackground: #081209;
+    --whiteColor: #202731;
+    --blackColor: #F5F6F8;
     --box-shadow: rgba(102, 187, 106, .4);
     --progressSubColor:rgba(102, 187, 106, .2); 
 }
+
 
 /* --------------- Base css ---------------- */
 
@@ -249,7 +260,7 @@ section{
     border-radius: 50%;
 }
 .themeColor-box h3{
-    color: var(--Black);
+    color: var(--blackColor);
     text-transform: capitalize;
     font-weight: 600;
     font-size: 18px;
@@ -266,14 +277,15 @@ section{
 .themeLightDark span{
     font-size: 14px;
     font-weight: 500;
-    color: var(--Black);
+    color: var(--blackColor);
 }
 .themeLightDark label {
 	position: relative;
 	width: 65px;
-	height: 30px;
+	height: 32px;
 	display: inline-block;
-	background: var(--whiteColor);
+	background: var(--White);
+    border: 1px solid var(--firstColor);
 	border-radius: 20px;
     cursor: pointer;
     transition: background .3s ease-in;
@@ -285,16 +297,16 @@ section{
 	left: 5px;
 	width: 24px;
 	height: 24px;
-	background: var(--blackColor);
+	background: var(--Black);
 	border-radius: 50%;
     transition: .4s ease-in;
 }
 .themeLightDark label.active{
-    background: var(--blackColor);
+    background: var(--Black);
 }
 .themeLightDark label.active::before{
-    background: var(--whiteColor);
-    left: calc(65px - 29px);
+    background: var(--White);
+    left: calc(65px - 32px);
 }
 .themeColorButton{
     position: relative;
@@ -309,18 +321,13 @@ section{
     padding: 20px 20px 8px;
     width: 100%;
 }
-.none{
-    display: none !important;
-}
 .themeColorButton .themeDark{
-    height: 100px;
+    height: 0px;
     opacity: 0;
     visibility: hidden;
-    padding: 20px 20px 8px;
-    transition: .2s ease-in;
-    transform-origin: bottom;
+    padding: 0;
 }
-.themeDark.activee{
+.themeDark.active{
     position: relative;
     bottom: 0;
     width: 100%;
@@ -330,6 +337,9 @@ section{
     padding: 20px 20px 8px;
     z-index: 5;
     /* transition:1s ease-in; */
+}
+.themeLight.none{
+    display: none !important;
 }
 .themeColor-box button{
     width: 35px;height: 35px;
@@ -346,22 +356,28 @@ section{
 .themeColor-box button:is(:hover){
     opacity: .5;
 }
-.themeLight button:nth-child(1){
+.themeLight button:nth-child(1),
+.themeDark button:nth-child(1){
     background: #D0637C;
 }
-.themeLight button:nth-child(2){
+.themeLight button:nth-child(2),
+.themeDark button:nth-child(2){
     background: #26a69a;
 }
-.themeLight button:nth-child(3){
+.themeLight button:nth-child(3),
+.themeDark button:nth-child(3){
     background: #a688fa;
 }
-.themeLight button:nth-child(4){
+.themeLight button:nth-child(4),
+.themeDark button:nth-child(4){
     background: #f75833;
 }
-.themeLight button:nth-child(5){
+.themeLight button:nth-child(5),
+.themeDark button:nth-child(5){
     background: #19bde1;
 }
-.themeLight button:nth-child(6){
+.themeLight button:nth-child(6),
+.themeDark button:nth-child(6){
     background: #66bb6a;
 }
 

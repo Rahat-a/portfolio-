@@ -13,22 +13,21 @@ function checkUncheck() {
 }
 
 // theme switcher
-// var themeSwitcher = document.querySelector(".themeSwitcher")
-// var themeOpen = document.querySelector(".themeSetting")
-// var iconFlip = document.querySelector(".themeSetting i")
+var themeSwitcher = document.querySelector(".themeSwitcher")
+var themeOpen = document.querySelector(".themeSetting")
+var iconFlip = document.querySelector(".themeSetting i")
 
-// themeSwitcher.style.right = "-230px";
-// iconFlip.style.transform="scaleX(1)";
-// themeOpen.onclick = function(){
-//     if ((themeSwitcher.style.right == "-230px")&&(iconFlip.style.transform="scaleX(1)")) {
-//         themeSwitcher.style.right = "10px";
-//         iconFlip.style.transform="scaleX(-1)"
-//     }else{
-//         themeSwitcher.style.right = "-230px";
-//         iconFlip.style.transform="scaleX(1)";
-//     }
-// }
-
+themeSwitcher.style.right = "-230px";
+iconFlip.style.transform="scaleX(1)";
+themeOpen.onclick = function(){
+    if ((themeSwitcher.style.right == "-230px")&&(iconFlip.style.transform="scaleX(1)")) {
+        themeSwitcher.style.right = "10px";
+        iconFlip.style.transform="scaleX(-1)"
+    }else{
+        themeSwitcher.style.right = "-230px";
+        iconFlip.style.transform="scaleX(1)";
+    }
+}
 
 // =================== Light Dark toggle ==============
 var darkMode = document.getElementById('dark');
@@ -38,9 +37,23 @@ darkMode.addEventListener('click', function(){
 // is DarkMode on then dark color pelete position
 var darkOn = document.querySelector('.darkMode');
 var darkpalette = document.querySelector('.themeDark');
-darkOn.onclick = function(){
-    darkpalette.classList.toggle('activee')
+var LightNone = document.querySelector('.themeLight');
+var LightTheme = document.querySelector('.lightDarkSwitch');
+var lighthtmlAttribute = document.querySelector('html');
+var isDarkMode = false;
+darkOn.onclick = function(event){
+    darkpalette.classList.toggle('active')
+    LightNone.classList.toggle('none')
+    
+    if(!isDarkMode){
+        lighthtmlAttribute.setAttribute("data-selected-theme", "defaultDark");
+        isDarkMode=true;
+    }else{
+        lighthtmlAttribute.setAttribute("data-selected-theme", "defaultLight");
+        isDarkMode=false;
+    }
 }
+
 
 
 // ============  theme colro switche by https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/
@@ -49,6 +62,7 @@ darkOn.onclick = function(){
 const themeColorLight = document.querySelector('.themeLight');
 const themeColorButtonLight = themeColorLight.querySelectorAll('button');
 
+
 // Logs the clicked button
 const handleThemeSelectionLight = (event) =>{
     const theme = event.target.getAttribute('data-theme')
@@ -56,7 +70,7 @@ const handleThemeSelectionLight = (event) =>{
     document.documentElement.setAttribute("data-selected-theme",theme);
 
     // delete 'aria-pressed="true" ' form previous button
-    const prevBtn = document.querySelector('[data-theme][aria-pressed="true"]');
+    const prevBtn = document.querySelector('.themeLight [data-theme][aria-pressed="true"]');
     prevBtn.setAttribute('aria-pressed', false);
     event.target.setAttribute('aria-pressed', true);
 
@@ -65,7 +79,6 @@ const handleThemeSelectionLight = (event) =>{
 
 themeColorButtonLight.forEach((button) =>{
     button.addEventListener('click', handleThemeSelectionLight);
-    // document.documentElement.setAttribute("data-theme", button)
 });
 
 
@@ -74,13 +87,13 @@ const themeColorDark = document.querySelector('.themeDark');
 const themeColorButtonDark = themeColorDark.querySelectorAll('button');
 
 // Logs the clicked button
-const handleThemeSelection = (event) =>{
+const handleThemeSelectionDark = (event) =>{
     const theme = event.target.getAttribute('data-theme')
     const isPressrd = event.target.getAttribute('aria-pressed');
     document.documentElement.setAttribute("data-selected-theme",theme);
 
     // delete 'aria-pressed="true" ' form previous button
-    const prevBtn = document.querySelector('[data-theme][aria-pressed="true"]');
+    const prevBtn = document.querySelector('.themeDark [data-theme][aria-pressed="true"]');
     prevBtn.setAttribute('aria-pressed', false);
     event.target.setAttribute('aria-pressed', true);
 
@@ -89,5 +102,4 @@ const handleThemeSelection = (event) =>{
 
 themeColorButtonDark.forEach((button) =>{
     button.addEventListener('click', handleThemeSelectionDark);
-    // document.documentElement.setAttribute("data-theme", button)
 });
