@@ -383,7 +383,7 @@ section{
 
 /* ============ HEADER CSS ================== */
 #header{
-    background: #EDEEF310;
+    /* background: #EDEEF310; */
     backdrop-filter: blur(1.25rem);
     padding: 1.25rem 0;
     position: fixed;
@@ -410,6 +410,7 @@ section{
 }
 .navMenu{
     text-align: end;
+    backdrop-filter: blur(9.25rem);
 }
 .navMenu ul li{
     display: inline-block;
@@ -423,7 +424,7 @@ section{
     color: var(--blackColor);
     font-weight: 600;
     text-transform: capitalize;
-    transition: color .3s ease;
+    transition: color .4s ease;
 }
 .navMenu ul li a:hover{
     color: var(--firstColor);
