@@ -41,7 +41,7 @@ var LightNone = document.querySelector('.themeLight');
 var LightTheme = document.querySelector('.lightDarkSwitch');
 var lighthtmlAttribute = document.querySelector('html');
 var isDarkMode = false;
-darkOn.onclick = function(event){
+darkOn.onclick = function(){
     darkpalette.classList.toggle('active')
     LightNone.classList.toggle('none')
     
