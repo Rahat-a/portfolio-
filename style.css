@@ -410,7 +410,6 @@ section{
 }
 .navMenu{
     text-align: end;
-    backdrop-filter: blur(9.25rem);
 }
 .navMenu ul li{
     display: inline-block;
