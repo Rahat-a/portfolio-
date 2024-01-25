@@ -53,7 +53,7 @@
     --semiBlack: #4B5056 ;
     --tab-border: #cecccc;
     --box-shadow: rgba(208, 99, 124, .4);
-    --progressSubColor:rgba(208,99,124, .2);    
+    --progressSubColor:rgba(208,99,124, .2);  
 }
 
 [data-selected-theme="dark"]{
@@ -71,22 +71,6 @@
     --tab-border: #cecccc;
     
 }
-/* ===== dark theme for backup */
-/* [data-selected-theme="dark"]{
-    --secondColor:#DD868C;
-    --background: #121212;
-    --secBackground: #18191a;
-    --White: #f5f6f8;
-    --darkWhite: #f5f6f8
-    --Black: #202731;
-    --whiteColor: #202731;
-    --blackColor: #F5F6F8;
-    --firstColor: #8d6e63;
-    --box-shadow: rgba(141, 110, 99, .4);
-    --progressSubColor:rgba(141, 110, 99, .2);
-    --tab-border: #cecccc;
-    
-} */
 
 [data-selected-theme="green"]{
     --firstColor:#26a69a;
@@ -182,6 +166,7 @@
     --blackColor: #F5F6F8;
     --box-shadow: rgba(102, 187, 106, .4);
     --progressSubColor:rgba(102, 187, 106, .2); 
+    --size: 20px;  
 }
 
 
@@ -192,6 +177,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+  
 body{
     background: var(--background);
     font-family:  "Poppins", sans-serif;
