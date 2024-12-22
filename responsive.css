@@ -181,6 +181,9 @@
     .contactForm form {
         width: 100%;
     }
+    .themeSetting .tooltip{
+        display: none;
+    }
 }
 
 /* ======================== 481 ============================= */

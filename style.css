@@ -54,6 +54,7 @@
     --tab-border: #cecccc;
     --box-shadow: rgba(208, 99, 124, .4);
     --progressSubColor:rgba(208,99,124, .2);  
+    --tooltipBgColor: #e6b1bd;
 }
 
 [data-selected-theme="dark"]{
@@ -78,6 +79,7 @@
     --secBackground: #F4FDFC;
     --box-shadow: rgba(38, 166, 154, .4);
     --progressSubColor:rgba(38, 166, 154, .2);
+    --tooltipBgColor: #9ad8d3;
 }
 [data-selected-theme="purple"]{
     --firstColor:#a688fa;
@@ -85,6 +87,7 @@
     --secBackground: #FDFDFF;
     --box-shadow: rgba(166, 136, 250, .4);
     --progressSubColor:rgba(166, 136, 250, .2);
+    --tooltipBgColor: #d6c8fd;
 }
 [data-selected-theme="orange"]{
     --firstColor:#f75833;
@@ -92,6 +95,7 @@
     --secBackground: #F4F1F0;
     --box-shadow: rgba(247, 88, 51, .4);
     --progressSubColor:rgba(247, 88, 51, .2);
+    --tooltipBgColor: #fcaf9d;
 }
 [data-selected-theme="blue"]{
     --firstColor: #19bde1;
@@ -99,6 +103,7 @@
     --secBackground: #F3FCFF;
     --box-shadow: rgba(25, 189, 225, .4);
     --progressSubColor:rgba(25, 189, 225, .2); 
+    --tooltipBgColor: #96e1f2;
 }
 [data-selected-theme="green-fern"]{
     --firstColor: #66bb6a;
@@ -106,6 +111,7 @@
     --secBackground: #FDFFFD;
     --box-shadow: rgba(102, 187, 106, .4);
     --progressSubColor:rgba(102, 187, 106, .2); 
+    --tooltipBgColor: #bbe4bd;
 }
 /* dark */
 [data-selected-theme="defaultDark"]{
@@ -120,7 +126,8 @@
     --box-shadow: rgba(208, 99, 124, .4);
     --progressSubColor:rgba(208,99,124, .2); 
     --darkWhite: #f5f6f8;
-    --tab-border: #cecccc;    
+    --tab-border: #cecccc;  
+    --tooltipBgColor: #5b2a36;  
 }
 [data-selected-theme="greenDark"]{
     --firstColor:#26a69a;
@@ -129,7 +136,8 @@
     --whiteColor: #202731;
     --blackColor: #F5F6F8;
     --box-shadow: rgba(38, 166, 154, .4);
-    --progressSubColor:rgba(38, 166, 154, .2);
+    --progressSubColor:rgba(38, 166, 154, .2); 
+    --tooltipBgColor: #104440;  
 }
 [data-selected-theme="purpleDark"]{
     --firstColor:#a688fa;
@@ -138,7 +146,8 @@
     --whiteColor: #202731;
     --blackColor: #F5F6F8;
     --box-shadow: rgba(166, 136, 250, .4);
-    --progressSubColor:rgba(166, 136, 250, .2);
+    --progressSubColor:rgba(166, 136, 250, .2); 
+    --tooltipBgColor: #47386f;  
 }
 [data-selected-theme="orangeDark"]{
     --firstColor:#f75833;
@@ -147,7 +156,8 @@
     --whiteColor: #202731;
     --blackColor: #F5F6F8;
     --box-shadow: rgba(247, 88, 51, .4);
-    --progressSubColor:rgba(247, 88, 51, .2);
+    --progressSubColor:rgba(247, 88, 51, .2); 
+    --tooltipBgColor: #6b2414;  
 }
 [data-selected-theme="blueDark"]{
     --firstColor: #19bde1;
@@ -156,7 +166,8 @@
     --whiteColor: #202731;
     --blackColor: #F5F6F8;
     --box-shadow: rgba(25, 189, 225, .4);
-    --progressSubColor:rgba(25, 189, 225, .2); 
+    --progressSubColor:rgba(25, 189, 225, .2);  
+    --tooltipBgColor: #0b5666;  
 }
 [data-selected-theme="green-fernDark"]{
     --firstColor: #66bb6a;
@@ -166,7 +177,8 @@
     --blackColor: #F5F6F8;
     --box-shadow: rgba(102, 187, 106, .4);
     --progressSubColor:rgba(102, 187, 106, .2); 
-    --size: 20px;  
+    --size: 20px;   
+    --tooltipBgColor: #2a502c;  
 }
 
 
@@ -231,6 +243,37 @@ section{
     position: absolute;
     top: 0px;
     left: -80px;
+    width: 150px;
+}
+.themeSetting .tooltip {
+    position: absolute;
+    top: -2rem;
+    left: -4.5rem;
+    font-size: 12px;
+    background-color: var(--tooltipBgColor);
+    padding: 7px 10px;
+    font-weight: 100;
+    color: var(--blackColor);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: ease .3s ;
+}
+.themeSetting .tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    right: 14%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--tooltipBgColor);
+    z-index: -1;
+    transform: rotate(45deg);
+}
+.themeSetting:hover .tooltip{
+    top: -2.8rem;
+    opacity: 1;
+    visibility: visible;
 }
 .themeSetting i{
     display: block;
@@ -529,7 +572,6 @@ input[type="checkbox"]:checked ~ .navMenu{
 	background: var(--firstColor);
 	border-radius: 0.3125rem;
     filter: drop-shadow(0 8px 8px var(--box-shadow));
-    transition: all 1s ease-in-out;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -934,7 +976,7 @@ input[type="checkbox"]:checked ~ .navMenu{
     color: var(--blackColor);
     font-family:  "Poppins", sans-serif;
     background: var(--background);
-    border: 1px solid var(--background);
+    border: 1px solid var(--box-shadow);
     position: relative;
 }
 .inputGroup label{
@@ -973,7 +1015,7 @@ form .inputGroup input:valid ~ label{
     color: var(--blackColor);
     font-family:  "Poppins", sans-serif;
     background: var(--background);
-    border: 1px solid var(--background);
+    border: 1px solid var(--box-shadow);
 }
 .inputTextarea{
     position: relative;
