@@ -90,9 +90,9 @@
         padding: 0;
         transition: right .4s linear;
         text-align: center;
-        display: none;
+        display: grid;
         place-items: center;
-        pointer-events: none;
+        scroll-behavior:unset;
         /* display: none; */
     }
     .nav input[type="checkbox"]{
