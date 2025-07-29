@@ -92,6 +92,7 @@
         text-align: center;
         display: grid;
         place-items: center;
+        pointer-events: none;
         /* display: none; */
     }
     .nav input[type="checkbox"]{
