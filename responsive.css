@@ -90,7 +90,7 @@
         padding: 0;
         transition: right .4s linear;
         text-align: center;
-        display: grid;
+        display: none;
         place-items: center;
         pointer-events: none;
         /* display: none; */
